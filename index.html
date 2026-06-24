@@ -7,20 +7,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --red:    #b81c1c;
-    --red2:   #d32f2f;
-    --navy:   #0d1b3e;
-    --gold:   #f5c518;
+    --red:    #2c5268;
+    --red2:   #3a6478;
+    --navy:   #1a2f40;
+    --gold:   #f5dc3e;
     --white:  #ffffff;
     --light:  #f4f4f4;
-    --dark:   #0a0a0a;
+    --dark:   #0f2030;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
     font-family: 'Barlow', sans-serif;
-    background: #111;
+    background: #0f2030;
     color: var(--white);
     overflow-x: hidden;
   }
@@ -177,7 +177,7 @@
   }
   .metrics-list li:last-child { border-bottom: none; }
   .tagline-bar {
-    background: #111;
+    background: #0f2030;
     color: var(--white);
     padding: 14px 20px;
     font-family: 'Oswald', sans-serif;
@@ -211,7 +211,7 @@
 
   /* ── INTRODUCTION ── */
   .intro {
-    background: #1a1a2e;
+    background: #1a2f40;
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 60px;
@@ -351,7 +351,7 @@
 
   /* ── COMPARISON ── */
   .comparison {
-    background: #0f0f1a;
+    background: #0f2030;
     text-align: center;
   }
   .comparison h2 { font-family: 'Oswald', sans-serif; font-size: 2.4rem; color: var(--gold); margin-bottom: 48px; }
@@ -430,7 +430,7 @@
 
   /* ── METRICS ── */
   .metrics {
-    background: #0a0a14;
+    background: #0f2030;
     text-align: center;
   }
   .metrics h2 { font-family: 'Oswald', sans-serif; font-size: 2.4rem; color: var(--gold); margin-bottom: 48px; }
@@ -776,7 +776,7 @@
 
   /* ── FOOTER ── */
   footer {
-    background: #050508;
+    background: #0a1a28;
     text-align: center;
     padding: 30px;
     font-size: .8rem;
@@ -796,13 +796,15 @@
     .intro-avatar { margin: 0 auto 24px; }
     .comp-table { font-size: .85rem; }
 
-    /* About Us headline: shrink on mobile */
-    .intro-headline {
-      font-size: clamp(1.4rem, 7vw, 2rem) !important;
+    /* ── ABOUT US: mobile fixes ── */
+    /* Headline: shrink font so it doesn't overflow */
+    .intro h2,
+    section h2[style*="clamp"] {
+      font-size: clamp(1.4rem, 6vw, 2rem) !important;
       letter-spacing: -0.5px !important;
     }
-    /* Founder cards: stack vertically on mobile */
-    .founder-grid {
+    /* Founder cards: stack vertically */
+    div[style*="grid-template-columns:1fr 1fr"][style*="gap:24px"] {
       grid-template-columns: 1fr !important;
     }
     /* Section padding for intro */
@@ -963,7 +965,7 @@
   <p style="font-family:'Oswald',sans-serif; font-size:.75rem; letter-spacing:4px; text-transform:uppercase; color:var(--gold); opacity:.7; margin-bottom:14px;">01 · About Us</p>
 
   <!-- Headline -->
-  <h2 class="intro-headline" style="font-family:'Oswald',sans-serif; font-size:clamp(1.8rem,3.5vw,2.6rem); color:var(--white); text-transform:uppercase; letter-spacing:-1px; line-height:1.1; margin-bottom:32px;">
+  <h2 style="font-family:'Oswald',sans-serif; font-size:clamp(1.8rem,3.5vw,2.6rem); color:var(--white); text-transform:uppercase; letter-spacing:-1px; line-height:1.1; margin-bottom:32px;">
     Built by Storytellers Shaped by<br>
     <span style="color:var(--gold);">Sports, Adventure &amp; Survival.</span>
   </h2>
@@ -980,7 +982,7 @@
           <div style="font-size:.75rem; color:var(--gold); opacity:.75; letter-spacing:1px; text-transform:uppercase;">Storytelling &amp; Systems</div>
         </div>
       </div>
-      <p style="font-size:.93rem; line-height:1.75; color:rgba(255,255,255,.8);">From Northeast India. Built a filmmaking career with no school, no connections — only fieldwork and execution. Worked alongside brands like Red Bull. A near-fatal accident and multiple surgeries later, one belief held: <strong style="color:var(--white);">structure outlasts talent.</strong></p>
+      <p style="font-size:.93rem; line-height:1.75; color:rgba(255,255,255,.8);">From Northeast India. Built a filmmaking career with no school, no connections — only fieldwork and execution. Worked alongside brands like Red Bull. A near-fatal accident later, one belief held: <strong style="color:var(--white);">structure outlasts talent.</strong></p>
     </div>
 
     <!-- Founder 2 -->
@@ -1383,6 +1385,14 @@
     "Initially when we started we were expecting to generate 200–300 Leads in 3 Months. But they got me 500 leads in the first 10 days."
     <cite>— Madhujya Madhab Bora, Founder · Kaziranga Greens Football Academy</cite>
   </div>
+
+  <div style="margin-top:40px; border-radius:10px; overflow:hidden; max-width:800px; margin-left:auto; margin-right:auto;">
+    <iframe width="100%" style="aspect-ratio:16/9; border:none; display:block;"
+      src="https://www.youtube.com/embed/hnOkcKT0qX0"
+      title="Madhujya Madhab Bora Testimonial — CineCompass Creations"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen loading="lazy"></iframe>
+  </div>
 </section>
 
 <!-- CTA -->
@@ -1392,7 +1402,7 @@
   We build structured admissions systems that generate consistent, high-quality trial bookings and convert them into players.</p>
   <div class="sprint">We implement this through our <em>Elite Admissions Sprint™</em></div>
   <p class="sprint-desc">A 90-day system designed to generate 50–100 qualified trials.</p>
-  <a class="cta-btn" href="https://bio.site/CinecompassCreations" target="_blank" rel="noopener">Steal the Exact System &amp; Funnel — Free</a>
+  <a class="cta-btn" href="https://bio.site/sauravbora" target="_blank" rel="noopener">Steal the Exact System &amp; Funnel — Free</a>
   <p class="cta-sub">Check the featured section for access</p>
 </section>
 
