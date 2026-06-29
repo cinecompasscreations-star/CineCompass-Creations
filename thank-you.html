@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Your system is on its way — CineCompass</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  font-family:"Hanken Grotesk",-apple-system,system-ui,sans-serif;
+  color:#EEF5FA;min-height:100vh;
+  display:flex;flex-direction:column;
+  background:
+    radial-gradient(140% 70% at 50% -5%,rgba(245,220,62,0.09),rgba(245,220,62,0) 55%),
+    linear-gradient(160deg,#1E3D52 0%,#2C5268 35%,#3A6478 65%,#2C5268 100%);
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+header{
+  padding:18px 24px;display:flex;align-items:center;gap:10px;
+  border-bottom:1px solid rgba(200,225,240,0.12);
+}
+header a{display:flex;align-items:center;gap:10px;}
+header span{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:17px;color:#EEF5FA;}
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:48px 24px;}
+.card{
+  background:rgba(26,47,64,0.85);border:1px solid rgba(200,225,240,0.14);
+  border-radius:20px;padding:clamp(36px,6vw,60px) clamp(28px,5vw,52px);
+  max-width:540px;width:100%;text-align:center;
+  box-shadow:0 32px 80px -24px rgba(0,0,0,0.45);
+}
+.tick{
+  width:60px;height:60px;border-radius:50%;
+  background:rgba(245,220,62,0.15);
+  border:2px solid rgba(245,220,62,0.4);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 24px;font-size:26px;
+}
+h1{
+  font-family:"Bricolage Grotesque",sans-serif;
+  font-weight:800;font-size:clamp(24px,5vw,34px);
+  line-height:1.08;letter-spacing:-0.02em;margin-bottom:14px;
+}
+h1 em{color:#F5DC3E;font-style:normal;}
+.sub{font-size:15.5px;color:#9BBECE;line-height:1.65;margin-bottom:32px;}
+.sub strong{color:#EEF5FA;font-weight:600;}
+
+/* DOWNLOAD BUTTON */
+.dl-btn{
+  display:inline-flex;align-items:center;gap:9px;
+  background:#F5DC3E;color:#2A2400;
+  font-family:"Space Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.05em;
+  border-radius:8px;padding:15px 28px;
+  transition:box-shadow .2s,transform .12s;margin-bottom:24px;
+}
+.dl-btn:hover{box-shadow:0 12px 32px -12px rgba(245,220,62,0.4);}
+.dl-btn:active{transform:scale(.98);}
+
+.divider{border:none;border-top:1px solid rgba(200,225,240,0.1);margin-bottom:24px;}
+
+.next-label{
+  font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.16em;
+  text-transform:uppercase;color:#6A8EA6;display:block;margin-bottom:16px;
+}
+.next-steps{list-style:none;text-align:left;display:flex;flex-direction:column;gap:10px;margin-bottom:28px;}
+.next-steps li{display:flex;gap:12px;font-size:14px;color:#9BBECE;line-height:1.5;}
+.next-steps .n{
+  font-family:"Space Mono",monospace;font-size:11px;color:#F5DC3E;
+  border:1px solid rgba(245,220,62,0.3);border-radius:4px;
+  padding:2px 7px;line-height:1.6;flex:none;height:fit-content;margin-top:1px;
+}
+
+.cta-link{
+  display:inline-flex;
+  font-family:"Space Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.04em;
+  border:1px solid rgba(200,225,240,0.2);border-radius:999px;
+  padding:11px 20px;color:#EEF5FA;transition:border-color .2s;
+}
+.cta-link:hover{border-color:rgba(245,220,62,0.5);}
+
+footer{
+  text-align:center;padding:20px 24px;
+  font-family:"Space Mono",monospace;font-size:11px;color:#6A8EA6;
+  border-top:1px solid rgba(200,225,240,0.08);
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="services_packages.html">
+    <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+      <circle cx="16" cy="16" r="14" stroke="#F5DC3E" stroke-width="1.8"/>
+      <circle cx="16" cy="16" r="5" fill="#F5DC3E"/>
+      <line x1="16" y1="2"  x2="16" y2="11" stroke="#F5DC3E" stroke-width="1.5"/>
+      <line x1="16" y1="21" x2="16" y2="30" stroke="#F5DC3E" stroke-width="1.5"/>
+      <line x1="2"  y1="16" x2="11" y2="16" stroke="#F5DC3E" stroke-width="1.5"/>
+      <line x1="21" y1="16" x2="30" y2="16" stroke="#F5DC3E" stroke-width="1.5"/>
+    </svg>
+    <span>CineCompass</span>
+  </a>
+</header>
+
+<main>
+  <div class="card">
+    <div class="tick">✓</div>
+    <h1>It's on its way. <em>Check your inbox.</em></h1>
+    <p class="sub">We've sent the Elite Admissions Sprint™ to your email. While you're waiting, here's what to do first.</p>
+
+    <!-- REPLACE href with your actual PDF link (Google Drive shareable link, Dropbox, etc.) -->
+    <a class="dl-btn" href="https://docs.google.com/document/d/1O94efFsBl_Hi-Tupa64Oxgb_YfqIhtOi/export?format=pdf" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download now (don't wait for email)
+    </a>
+
+    <hr class="divider"/>
+
+    <span class="next-label">While you're here</span>
+    <ul class="next-steps">
+      <li>
+        <span class="n">01</span>
+        <span>Open the playbook and read Phase 1 first — positioning. Most people skip straight to content and wonder why it doesn't work.</span>
+      </li>
+      <li>
+        <span class="n">02</span>
+        <span>Run the offer framework on your own business before you build anything. It takes 20 minutes and changes everything downstream.</span>
+      </li>
+      <li>
+        <span class="n">03</span>
+        <span>If you'd rather we build it for you — or alongside you — book a 30-minute strategy call. No pitch. We'll map where to start.</span>
+      </li>
+    </ul>
+
+    <a class="cta-link" href="https://gorgeous-crepe-5b9c6f.netlify.app/BookAStrategyCall.html">
+      Book a free strategy call →
+    </a>
+  </div>
+</main>
+
+<footer>© 2026 CineCompass Creations</footer>
+
+</body>
+</html>
